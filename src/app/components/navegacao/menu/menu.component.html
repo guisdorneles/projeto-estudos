@@ -1,0 +1,10 @@
+<nav class="container-menu" [ngClass]="menu.isExpansive ? 'menu-opened': 'menu-closed'">
+    <ul class="flex-menu">
+        <li *ngFor="let item of listaItemMenu" class="flex-item-menu">
+            <a routerLink="{{item.rota}}" *ngIf="item.habilitado" >
+                <i class="{{item.icone}} menu-icon" routerLinkActive="active-item-menu"> </i>
+                <span class="flex-item-menu-text" routerLinkActive="active-item-menu">{{item.descricao}}</span>
+            </a>
+        </li>
+    </ul>
+</nav>

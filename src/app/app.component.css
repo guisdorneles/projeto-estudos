@@ -1,0 +1,11 @@
+.menu-opened {
+    left: 180px;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+}
+
+.menu-closed {
+    left: 72px;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+}

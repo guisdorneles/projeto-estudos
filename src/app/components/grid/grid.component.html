@@ -1,0 +1,16 @@
+<input type="text" class="form-control" placeholder="{{dados.texto_placeholder}}" [(ngModel)]="textoBusca">
+<span *ngIf="(dados.dataSet | filtroBuscaGrid : textoBusca: dados.colunas_pesquisaveis).length === 0">Dados não localizados</span>
+<table class="table table-component table-striped" *ngIf="(dados.dataSet | filtroBuscaGrid : textoBusca: dados.colunas_pesquisaveis).length !== 0">
+    <thead>
+        <tr>
+            <th *ngFor="let coluna of dados.colunas">{{coluna}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let itemDataSet of dados.dataSet | filtroBuscaGrid : textoBusca: dados.colunas_pesquisaveis">
+            <td *ngFor="let item of itemDataSet | keyvalue: returnZero; first as primeiroItem; last as ultimoItem">
+                {{item.value}}
+            </td>
+        </tr>
+    </tbody>    
+</table>

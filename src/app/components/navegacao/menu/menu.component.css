@@ -1,0 +1,114 @@
+.container-menu {
+    top: 72px;
+    position: fixed;
+    bottom: 0;
+    display: inline-block;
+    background: #3e4c62;
+}
+
+.menu-icon {
+    color: #abbcd9;
+    font-size: 18px;
+}
+
+.flex-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item-menu {
+    display: inline-block;
+    position: relative;
+}
+
+.flex-item-menu a {
+    padding: 16px 0 14px;
+    outline: 0;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-item-menu a:hover {
+    background: #4d5b80;
+    cursor: pointer;
+}
+
+.flex-item-menu-text {
+    color: #abbcd9;
+    font-size: 10px;
+}
+
+.active-item-menu {
+    color: #FFFFFF;
+}
+
+
+/*inicio para fazer a barra de rolagem no menu caso haja muitos icones*/
+
+.scroll-menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    /* width: 7px; */
+    width: 0;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/*fim  para fazer a barra de rolagem no menu caso haja muitos icones*/
+
+
+/*inicio do menu expandido*/
+
+.menu-opened {
+    width: 180px;
+    transition: flex 0.3s ease-in;
+    -webkit-transition: flex 0.3s ease-in;
+}
+
+.menu-opened a {
+    width: 180px;
+    flex-direction: row;
+    justify-content: start;
+    padding-left: 28px;
+}
+
+.menu-opened span {
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.menu-closed {
+    height: 100%;
+    width: 72px;
+    left: 0;
+    transform: translate(0, 0);
+    transition: all .3s;
+}
+
+.menu-closed a {
+    width: 72px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
